@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
         // dark brightness will override any color given below
         // primarySwatch: Colors.blue,
       ),
-      initialRoute: "/",
+      debugShowCheckedModeBanner: false,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => LoginPage(),
         // LoginPage is an object here and we denote it with () at the end
