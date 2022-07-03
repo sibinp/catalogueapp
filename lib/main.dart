@@ -1,6 +1,7 @@
 import 'package:catalogueapp/pages/home_page.dart';
 import 'package:catalogueapp/pages/login_page.dart';
 import 'package:catalogueapp/utils/routes.dart';
+import 'package:catalogueapp/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,15 +18,8 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),
       // no need of this since route / is there
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        // dark brightness will override any color given below
-        // primarySwatch: Colors.blue,
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
