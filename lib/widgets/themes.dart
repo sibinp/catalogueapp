@@ -12,7 +12,6 @@ class MyTheme {
         textTheme: Theme.of(context).textTheme,
       ));
 
-  // darkTheme
   static ThemeData darkTheme(BuildContext context) => ThemeData(
         brightness: Brightness.dark,
       );

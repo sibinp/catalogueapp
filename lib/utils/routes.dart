@@ -1,5 +1,4 @@
 class MyRoutes {
-  static String loginRoute =
-      "/login"; // object can be creted once only, memory only once
+  static String loginRoute = "/login";
   static String homeRoute = "/home";
 }

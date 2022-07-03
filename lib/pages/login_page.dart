@@ -1,5 +1,5 @@
-import 'package:catalogueapp/utils/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -7,8 +7,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // underscore indicates private
-
   String name = "";
   bool changeButton = false;
 
@@ -19,10 +17,8 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         changeButton = true;
       });
-
       await Future.delayed(Duration(seconds: 1));
       await Navigator.pushNamed(context, MyRoutes.homeRoute);
-
       setState(() {
         changeButton = false;
       });
@@ -41,17 +37,19 @@ class _LoginPageState extends State<LoginPage> {
                 Image.asset(
                   "assets/images/hey.png",
                   fit: BoxFit.cover,
-                  height: 300,
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 20.0,
                 ),
                 Text(
                   "Welcome $name",
-                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 20.0,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
@@ -65,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return "Username cannot be empty!";
+                            return "Username cannot be empty";
                           }
 
                           return null;
@@ -83,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return "Password cannot be empty!";
+                            return "Password cannot be empty";
                           } else if (value.length < 6) {
                             return "Password length should be atleast 6";
                           }
@@ -92,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                         },
                       ),
                       SizedBox(
-                        height: 40,
+                        height: 40.0,
                       ),
                       Material(
                         color: Colors.deepPurple,
